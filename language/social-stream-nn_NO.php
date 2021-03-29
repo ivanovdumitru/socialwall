@@ -1,0 +1,37 @@
+<?php
+
+$_['tags'] = "Etikett";
+$_['posted'] = "Postet";
+$_['show_all'] = "Vis alle";
+$_['comments'] = "kommentarer";
+$_['likes'] = "Likes";
+$_['load_more'] = "Last flere";
+$_['a_long_while_ago'] = "Lang tid siden";
+$_['over_2_years_ago'] = "Over 2 år siden";
+$_['over_a_year_ago'] = "Over et år siden";
+$_['about_a_year_ago'] = "Rundt et år siden";
+$_['d_months_ago'] = "%d måneder siden";
+$_['last_month'] = "Siste måned";
+$_['3_weeks_ago'] = "3 uker siden";
+$_['2_weeks_ago'] = "2 uker siden";
+$_['last_week'] = "Sist uke";
+$_['d_days_ago'] = "%d dager siden";
+$_['yesterday'] = "i går";
+$_['d_hours_ago'] = "%d timer siden";
+$_['an_hour_ago'] = "en time siden";
+$_['d_minutes_ago'] = "%d minutter siden";
+$_['just_now'] = "Akkuratt nå";
+$_['read_more'] = 'Les mer (+)';
+$_['read_less'] = 'Les mindre (-)';
+$_['timeline_photos'] = 'Fotos da linha do tempo';
+$_['added_photos'] = 'fotos adicionadas';
+$_['shared_story'] = 'história compartilhada';
+$_['created_note'] = 'Criar nota';
+$_['mobile_status_update'] = 'atualização de status móvel';
+$_['added_video'] = 'lagt video';
+$_['wall_post'] = 'innlegg på veggen';
+$_['created_event'] = 'Skapte hendelse';
+$_['show_comments'] = 'Vis kommentarer';
+$_['retweeted'] = 'retweeted';
+$_['search'] = 'Søk...';
+$_['search_stream'] = 'Søk i sosial strøm';

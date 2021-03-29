@@ -1,0 +1,46 @@
+<h2>{#G-settings#}</h2>
+{#message#}
+<form action="{#url#}" method="post">
+    <input type="hidden" name="step" value="general" />
+
+    <div class="input">
+        <p>{#path#}</p>
+        <input size="50" class="text" type="text" name="path" value="{#SB_PATH#}" />
+    </div>
+    <div class="input">
+        <p>{#timezone#}</p>
+        <input size="50" class="text" type="text" name="timezone" value="{#SB_TIMEZONE#}" />
+    </div>
+    <div class="input">
+        <p>{#locale#}</p>
+        {#SB_LOCALE#}
+    </div>
+    <div class="input">
+        <p>{#date_format#}</p>
+        <input size="50" class="text" type="text" name="date_format" value="{#SB_DATE_FORMAT#}" />
+    </div>
+    <div class="input">
+        <p>{#time_format#}</p>
+        <input size="50" class="text" type="text" name="time_format" value="{#SB_TIME_FORMAT#}" />
+    </div>
+    <div class="input">
+        <p>{#nonce_key#}</p>
+        <input size="50" class="text" type="text" name="nonce_key" value="{#SB_NONCE_KEY#}" />
+    </div>
+    <div class="input">
+        <p>{#curl#}</p>
+        {#SB_CURL#}
+    </div>
+    <div class="input">
+        <p>{#timeout#}</p>
+        <input size="50" class="text" type="text" name="timeout" value="{#SB_API_TIMEOUT#}" />
+    </div>
+	<div class="input">
+		<p>{#clear_cache#}</p>
+		<input class="button" type="submit" name="ClearCache" value="{#clear_cache#}" />
+	</div>
+
+    <div class="input">
+    	<input class="button" type="submit" name="save" value="{#save#}" />
+    </div>
+</form>

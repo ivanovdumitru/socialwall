@@ -1,0 +1,246 @@
+Version 2.9.2 - 27.11.2020
+- Fixing the carousel images lazy loading problem.
+- Fixing the carousel items alt tag and some styling issues.
+- Fixing the timeline layout load more images loading issue.
+- Handling the Instagram official API and SoundCloud errors.
+- Fixed the Instagram official API feed cache problem.
+
+Version 2.9.1 - 23.11.2020
+- Making some changes in custom result limiting feature.
+- Clear cache button added into admin panel.
+- Displaying only existing languages in admin panel.
+- Added new Grid and Carousel layouts.
+
+Version 2.9.0 - 02.11.2020
+- Fixed the SoundCloud user feed problem.
+- Instagram API official connection bringed back with latest changes.
+
+Version 2.8.9 - 12.07.2020
+- Feed custom result limiting feature added.
+- Facebook user feed support added as a separate option.
+
+Version 2.8.8 - 12.07.2020
+- Feed loading issues due to Instagram API changes fixed.
+
+Version 2.8.7 - 18.06.2020
+- Fixing the Instagram API change 'Response code is 200' problem.
+- VK Search Term/Hashtag feed added.
+- Fixing the display of Facebook user feed.
+- Adding scroll bar to rotating feed mode.
+
+Version 2.8.6 - 30.05.2020
+- Latest problem of loading some Facebook images on Safari due to API change has been fixed.
+- Latest problem of displaying of user information on Facebook items has been fixed.
+- Fixing the Instagram API change 'Media with this code does not exist' problem.
+- Fixing the double facebook.com url in links occured after release 3.7.10.
+- Instagram login error handling problem fixed.
+- Fixing the links when getting Facebook video feed.
+- Instagram and YouTube Ajax comments loading problem fixed.
+- Allowing lang and locale parameters in Twitter search feed.
+- Fixing the Instagram hashtag feed item description problem.
+- Fixing the CacheManager multi instanced drivers error.
+- Fixing the filtering problem while there are two streams on the same page.
+- Fixing the "This content isn't available right now" problem on Facebook.
+- Instagram profile information display problem fixed.
+- Instagram official API v1 credentials setup removed of the plugin.
+
+Version 2.8.5 - 29.01.2020
+- Allowing Instagram to get more than 50 items in each request.
+- Instagram original media urls added to the output data.
+- Instagram library required PHP version downgraded to 5.6.x.
+
+Version 2.8.4 - 30.12.2019
+- Instagram getting feed by location ID problem fixed.
+- Instagram getting feed by geographical location removed.
+- Instagram login information setup added.
+
+Version 2.8.3 - 13.12.2019
+- WCAG 2.1 HTML compatibility errors fixed.
+- Instagram IP banned restriction problem resolved.
+- Fixing the duplicate user info on items when getting Instagram hashtag feed.
+- Feature to have stream cached items listed by date is ascending order.
+
+Version 2.8.2 - 24.10.2019
+- jQuery.noConflict option added to avoid global definition of the library.
+- Setup password encrypted.
+- Making sharing buttons responsive.
+- Facebook own app connection problem fixed.
+- Instagram lacking user info problem fixed.
+- StumbleUpon removed of the plugin.
+
+Version 2.8.1 - 04.10.2019
+- Setup multiple Facebook pages listing problem fixed.
+- Tabable layout feed loading problem fixed.
+
+Version 2.8.0 - 26.09.2019
+- Setup administration panel added.
+- Facebook problem with API v4 fixed.
+- Instagram access token tool public_content permission problem fixed.
+- Instagram multi account authentication feature added.
+- Facebook multi account authentication feature added.
+- Google+ share button replaced with Pinterest button.
+- LinkedIn API upgraded to v2.
+- Instagram proxy setting authentication problem fixed.
+- Flickr Photoset/Album feed support added.
+
+Version 2.7.1 - 11.05.2019
+- Added a feature to convert Facebook shared links to embedded item.
+- Displaying the Twitter embed links with a custom style.
+
+Version 2.7.0 - 17.03.2019
+- API proxy setup setting added.
+- Twitter embedding connection refused error handled.
+- Google+ API deprecated and removed from the script.
+
+Version 2.6.9 - 02.03.2019
+- Fixing the images lazy loading problem which was occurred after v2.6.3.
+- Feature to disable images lazy loading on the social stream.
+- Added the sb-img class to all image tags on social stream.
+- Fixed the 'call stack size exceeded' issue on wall filtering.
+- The problem of wall relayouting while doing load more fixed.
+- Adding meta data to carousel items.
+
+Version 2.6.8 - 30.01.2019
+- Fixing the name problem in Facebook API request.
+- Fixing the problem of displaying Instagram user info on items.
+- Fixing the load more problem of Instagram user items.
+
+Version 2.6.7 - 14.01.2019
+- Added a feature to convert shared links on Twitter to Embed codes.
+- Facebook hashtags and users linking added.
+- Instagram new comments API deprecation problem fixed.
+
+Version 2.6.6 - 18.12.2018
+- Instagram hashtag feed API deprecated and replaced with a new solution.
+- Feature to get other Instagram user public feeds without an access token.
+
+Version 2.6.5 - 22.09.2018
+- Instagram multi-account feed access token reading problem fixed.
+
+Version 2.6.4 - 10.08.2018
+- Relocating the custom layouts folder.
+- Instagram private posts light-box video problem fixed.
+- The problem of extra items more than limit in some cases fixed.
+- Allowing to redefine SB_PATH variable in global scope using $GLOBALS['SB_PATH'] instead.
+- Carousel problem with jQuery v3 has been fixed.
+
+Version 2.6.3 - 10.07.2018
+- Facebook Graph API v3.0 updated and it will no longer display Facebook user info for private profiles.
+- Facebook's cover photo title problem has been fixed.
+- Facebook Group Feed deprecated.
+- Image cache proxy 404 not found problem fixed.
+- LinkedIn datetime problem on timeline fixed.
+- Facebook comments & likes count display problem fixed.
+- Facebook link post title to the original resource which is shared.
+- Instagram and YouTube show comments feature added.
+- Auto trigger show comments in lightbox slideshow mode.
+- Page scroll lazy load problem fixed.
+- Updated jQuery to v3.3.1.
+- Load media over https set to true by default
+
+Version 2.6.2 - 10.04.2018
+- Twitter search API 140 characters limit and image displaying problem has been fixed.
+- Instagram user public feed deprecated problem fixed.
+
+Version 2.6.1 - 11.03.2018
+- Problem of displaying wrong video URL on some Facebook shared items has been fixed.
+- Trimming the RSS data to fix reading by XML parser.
+- Facebook comment bank comment images removed.
+
+Version 2.6.0 - 13.11.2017
+- Ads management feature added.
+- Twitter API library has been updated.
+- Problem in displaying the tweets images when using the hashtag search has been fixed.
+- Wall twitching problem on IE and some other browsers has been fixed.
+- Facebook image resize on demand problem has been fixed.
+- Facebook localization problem has been fixed.
+- Problem with pinned items when, stream auto update is enabled has been fixed.
+- Carousel display problem with text only posts in Default and Flat layouts has been fixed.
+- Facebook Graph API updated to v2.10.
+- Facebook total likes and comments display added.
+- Turkish language translation added.
+- A responsive problem in lightbox slideshow has been fixed.
+- Lazy load problem when multiple walls are on a page, has been fixed.
+- SoundCloud API updated.
+- SoundCloud tracks' artworks iamge size fixed.
+- Option to re-layout wall based on page scroll or images load.
+- VK API updated and access token setup is required.
+- Facebook multi-share images problem fixed.
+- The problem of opening videos in system inbuilt player instead of lightbox on IE and Safari has been fixed.
+- Custom filtering tabs feature added.
+- Moving the custom layouts folder to the out of the script directory to avoid deleting the layout files after script updates.
+- Fixing a problem with showing the links in tweets body.
+- Problem of not displaying more RSS feed items on load more has been fixed.
+- Added the feature to disable specific filtering buttons.
+
+Version 2.5.3 - 15.11.2016
+- W3 Markup Validation passed for stream HTML contents.
+- Gutter X size issue fixed, when set to less than 10 it was displaying post in full width.
+- Twitter unknown video lightbox problem fixed.
+- Twitter videos problem when using hashtags with search API fixed.
+- Pinterest feed problem fixed.
+- Problem with decimal separator in setlocale has been fixed.
+- Notice errors while no twitter search terms result exist resolved.
+
+Version 2.5 - 05.07.2016
+- Problem with pinned & remove items fixed.
+- Duplicate items problem from tag feeds fixed.
+- Load more problem fixed for Facebook album/page photos and page videos.
+- An issue with reading RSS media content tag fixed.
+- Added jQuery v1.12.4 to the project.
+- Images lazy load problem with jQuery 1.12.x fixed.
+- Problem with loading images on first page load has been fixed.
+- Problem with hidding images on auto stream update has been fixed.
+- CSS & JS files combined for each display mode.
+- The feature to define the number of columns shwoing on each row for different viewport sizes on wall layout.
+- Duplicate Instagram items problem on load more fixed.
+- Video lightbox support added for Twitter.
+
+Version 2.0 - 06.02.2016
+- Opening all images in a lightbox window.
+- Profile thumbnail added in Modern layout.
+- RSS feed first image added to the item as thumbnail.
+- Scroll bars removed from lightbox window.
+- The gap that appearing at the board footer on wall filtering fixed.
+- Pinterest board problem fixed.
+- Auto-resize responsive lightbox window.
+- Feature to display Social Board items as lightbox slideshow.
+- Loading icon added on images.
+- CSS files compressed.
+- LinkedIn and Vine networks added.
+- A new theme/layout named Metro is added.
+- Tumblr lightbox video support added.
+- Vine item output upgraded.
+- Added an option to define, how to display the image for each item.
+- Added an option to allow loading images over https
+- Vimeo upgraded to the latest API with paging.
+- Some CSS styling fixes.
+
+Version 1.3 - 22.10.2015
+- Facebook tiny images' problem fixed.
+- Facebook the latest updates, Profile Unavailable problem fixed.
+- The problem of Opening video in a lightbox window for sticky Ajax Tabbed widget fixed.
+- Profile thumbnail linked to profile page in Modern2 layout.
+- The exclusion of retweets problem in Twitter lists and search feeds fixed.
+- Duplicate items problem fixed in Load More action.
+- Social API connection timeout option added and increased to solve the problem on low process servers.
+
+Version 1.2 - 20.09.2015
+- Vimeo video loading problem fixed.
+- Social Stream manipulation problem fixed.
+- Flickr upgraded to the latest API.
+- Load more items added for Flickr.
+- Added video opening in iframe for Instagram, YouTube, Vimeo and Google+.
+- Video icon overlay added on board video items.
+- Tumblr upgraded to the latest API v2.
+
+Version 1.1 - 04.08.2015
+- Facebook API version 2.4 upgrades, some problems fixed.
+- YouTube videos feed by channel ID added.
+- VK network user or community wall feed by owner ID added.
+- Carousel feed theme display options wasn't working.
+- The ability to remove the block radius border.
+- Loading problem on IE browser fixed.
+
+Version 1.0 - 10.07.2015
+- First release.

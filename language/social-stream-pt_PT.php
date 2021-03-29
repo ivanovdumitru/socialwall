@@ -1,0 +1,37 @@
+<?php
+
+$_['tags'] = 'Etiquetas';
+$_['posted'] = 'Publicado';
+$_['show_all'] = 'Exibir Tudo';
+$_['comments'] = 'comentários';
+$_['likes'] = 'Gostos';
+$_['load_more'] = 'Carregar Mais';
+$_['a_long_while_ago'] = 'Há muito tempo atrás';
+$_['over_2_years_ago'] = 'superior a 2 anos';
+$_['over_a_year_ago'] = 'mais de um ano atrás';
+$_['about_a_year_ago'] = 'cerca de um ano atrás';
+$_['d_months_ago'] = '%d meses atrás';
+$_['last_month'] = 'mês passado';
+$_['3_weeks_ago'] = '3 semanas atrás';
+$_['2_weeks_ago'] = '2 semanas atrás';
+$_['last_week'] = 'semana passada';
+$_['d_days_ago'] = '%d dias atrás';
+$_['yesterday'] = 'ontem';
+$_['d_hours_ago'] = '%d horas atrás';
+$_['an_hour_ago'] = 'uma hora atrás';
+$_['d_minutes_ago'] = '%d minutos atrás';
+$_['just_now'] = 'agora mesmo';
+$_['read_more'] = 'Leia mais (+)';
+$_['read_less'] = 'ler menos (-)';
+$_['timeline_photos'] = 'Fotos da linha do tempo';
+$_['added_photos'] = 'fotos adicionadas';
+$_['shared_story'] = 'história compartilhada';
+$_['created_note'] = 'Criar nota';
+$_['mobile_status_update'] = 'atualização de status móvel';
+$_['added_video'] = 'video Adicionado';
+$_['wall_post'] = 'pós parede';
+$_['created_event'] = 'Evento criado';
+$_['show_comments'] = 'Mostrar Comentários';
+$_['retweeted'] = 'retweetado';
+$_['search'] = 'Procurar...';
+$_['search_stream'] = 'Pesquisar no fluxo social';

@@ -1,0 +1,288 @@
+<h2>{#G-api_settings#}</h2>
+{#message#}
+<form action="{#url#}" method="post">
+    <input type="hidden" name="step" value="api" />
+    <p>{#api_desc#}</p>
+
+    <p class="warning">Please, do not forget to save the changes after connecting your accounts.</p>
+    
+    <div class="input" id="sections-section_facebook">
+        <h3>{#A-facebook#}</h3>
+        <p>{#A-facebook_desc#}</p>
+        <div class="input">
+            <p class="title">{#how_connect#}</p>
+            {#facebook_app#}
+        </div>
+        <div class="input" id="fieldrow-section_facebook_api_key">
+            <p class="title">{#A-facebook_api_key#}</p>
+            <input size="50" class="text" type="text" name="facebook_api_key" value="{#facebook_app_id#}" />
+        </div>
+        <div class="input" id="fieldrow-section_facebook_api_secret">
+            <p class="title">{#A-facebook_api_secret#}</p>
+            <input size="50" class="text" type="text" name="facebook_api_secret" value="{#facebook_app_secret#}" />
+        </div>
+        <div class="input">
+            <p>Click the button below and log into your Facebook account to obtain your Access Token.</p>
+            <a type="button" id="sb-facebook-token" href="{#facebook_token_url#}">Connect Facebook Page(s)</a>
+            <div id="sb-facebook-token-msg"></div>
+        </div>
+        <div class="input">
+            <p class="title">Authenticated Accounts</p>
+            <p>The list of Facebook accounts you have authenticated (you have an access token for them).</p>
+            {#facebook_accounts#}
+        </div>
+    </div>
+    <div class="input" id="sections-section_twitter">
+        <h3>{#A-twitter#}</h3>
+        <p>{#A-twitter_desc#}</p>
+        <div class="input">
+            <p class="title">{#how_connect#}</p>
+            {#twitter_app#}
+        </div>
+        <div class="input" id="fieldrow-section_twitter_api_key">
+            <p><input size="50" class="text" type="text" name="twitter_api_key" value="{#twitter_api_key#}" placeholder="{#A-twitter_api_key#}" /></p>
+        </div>
+        <div class="input" id="fieldrow-section_twitter_api_secret">
+            <p><input size="50" class="text" type="text" name="twitter_api_secret" value="{#twitter_api_secret#}" placeholder="{#A-twitter_api_secret#}" /></p>
+        </div>
+        <div class="input">
+            <p>Click the button below and log into your Twitter account to obtain your Access Token.</p>
+            <a type="button" id="sb-twitter-token" href="{#twitter_token_url#}">Get my Access Token</a>
+            <div id="sb-twitter-token-msg"></div>
+        </div>
+        <div class="input">
+            <p><input size="50" class="text" type="text" name="twitter_access_token" value="{#twitter_access_token#}" placeholder="{#A-twitter_access_token#}" /></p>
+            <p><input size="50" class="text" type="text" name="twitter_access_token_secret" value="{#twitter_access_token_secret#}" placeholder="{#A-twitter_access_token_secret#}" /></p>
+        </div>
+    </div>
+    <div class="input" id="sections-section_instagram">
+        <h3>{#A-instagram#}</h3>
+        <p>{#A-instagram_desc#}</p>
+        <div class="input">
+            <p class="title">{#how_connect#}</p>
+            {#instagram_app#}
+        </div>
+        <div class="input" id="fieldrow-section_instagram_api_key">
+            <p class="title">{#A-instagram_client_id#}</p>
+            <input size="50" class="text" type="text" name="instagram_api_key" value="{#instagram_client_id#}" />
+        </div>
+        <div class="input" id="fieldrow-section_instagram_api_secret">
+            <p class="title">{#A-instagram_client_secret#}</p>
+            <input size="50" class="text" type="text" name="instagram_api_secret" value="{#instagram_client_secret#}" />
+        </div>
+        <div class="input">
+            <p>Click the button below and log into your Instagram account to get your Access Token.</p>
+			<a type="button" id="sb-instagram-token" href="{#instagram_token_url#}">Connect Instagram Account(s)</a>
+            <div id="sb-instagram-token-msg"></div>
+        </div>
+        <div class="input">
+            <p class="title">Authenticated Accounts</p>
+            <p>The list of Instagram accounts you have authenticated (you have an access token for them).</p>
+            {#instagram_accounts#}
+        </div>
+        <!-- <div class="input">
+            <p class="title">{#A-instagram_account#}</p>
+            <p>{#A-instagram_account_desc#}</p>
+            <p><input size="50" class="text" type="text" name="instagram_username" value="{#instagram_username#}" placeholder="{#A-instagram_username#}" /></p>
+            <p><input size="50" class="text" type="password" name="instagram_password" value="{#instagram_password#}" placeholder="{#A-instagram_password#}" /></p>
+        </div> -->
+    </div>
+    <div class="input" id="sections-section_google">
+        <h3>{#A-google#}</h3>
+        <p>{#A-google_desc#}</p>
+        <div class="input">
+            <p class="title">{#A-google_api_key#}</p>
+            <p><input size="50" class="text" type="text" name="google_api_key" value="{#google_api_key#}" /></p>
+        </div>
+    </div>
+    <!-- <div class="input" id="sections-section_linkedin">
+        <h3>{#A-linkedin#}</h3>
+        <p>Required For All LinkedIn Feeds. <a href="{#doc_url#}#linkedin-api" target="_blank">Read this documentation</a> to find out how to obtain your LinkedIn Access Token.</p>
+        <div class="input">
+            <p class="title">{#how_connect#}</p>
+            {#linkedin_app#}
+        </div>
+        <div class="input" id="fieldrow-section_linkedin_api_key">
+            <input size="50" class="text" type="text" name="linkedin_api_key" value="{#linkedin_api_key#}" placeholder="{#A-linkedin_api_key#}" />
+        </div>
+        <div class="input" id="fieldrow-section_linkedin_api_secret">
+            <input size="50" class="text" type="text" name="linkedin_api_secret" value="{#linkedin_api_secret#}" placeholder="{#A-linkedin_api_secret#}" />
+        </div>
+        <div class="input">
+            <p>Click the button below and log into your LinkedIn account to obtain your Access Token.</p>
+            <a class="button button-primary" id="sb-linkedin-token" type="button" href="{#linkedin_token_url#}">Get my Access Token</a>
+            <div id="sb-linkedin-token-msg"></div>
+        </div>
+        <div class="input">
+            <p><input size="50" class="text" type="text" name="linkedin_access_token" value="{#linkedin_access_token#}" placeholder="{#A-linkedin_access_token#}" /></p>
+        </div>
+    </div> -->
+    <div class="input" id="sections-section_vimeo">
+        <h3>{#A-vimeo#}</h3>
+        <p>Required For All Vimeo Feeds. <a href="{#doc_url#}#vimeo-api" target="_blank">Read this documentation</a> to find out how to obtain your Vimeo Access Token.</p>
+        <div class="input">
+            <p class="title">{#A-vimeo_access_token#}</p>
+            <p><input size="50" class="text" type="text" name="vimeo_access_token" value="{#vimeo_access_token#}" /></p>
+        </div>
+    </div>
+    <div class="input" id="sections-section_vk">
+        <h3>{#A-vk#}</h3>
+        <p>Required For All VK Feeds. <a href="{#doc_url#}#vk-api" target="_blank">Read the documentation</a> for more details on how to get your VK Service Token.</p>
+        <div class="input">
+            <p class="title">{#A-vk_service_token#}</p>
+            <p><input size="50" class="text" type="text" name="vk_service_token" value="{#vk_service_token#}" /></p>
+        </div>
+    </div>
+    <div class="input" id="sections-section_soundcloud">
+        <h3>{#A-soundcloud#}</h3>
+        <p>Required For All SoundCloud Feeds. <a href="{#doc_url#}#soundcloud-api" target="_blank">Read the documentation</a> for more details on how to get your SoundCloud Client ID.</p>
+        <div class="input">
+            <p class="title">{#A-soundcloud_client_id#}</p>
+            <p><input size="50" class="text" type="text" name="soundcloud_client_id" value="{#soundcloud_client_id#}" /></p>
+        </div>
+    </div>
+    <div class="input" id="sections-section_tumblr">
+        <h3>{#A-tumblr#}</h3>
+        <p>Required For All Tumblr Feeds. <a href="{#doc_url#}#tumblr-api" target="_blank">Read the documentation</a> for more details on how to get your Tumblr API Key.</p>
+        <div class="input">
+            <p class="title">{#A-tumblr_api_key#}</p>
+            <p><input size="50" class="text" type="text" name="tumblr_api_key" value="{#tumblr_api_key#}" /></p>
+        </div>
+    </div>
+    <div class="input" id="sections-section_flickr">
+        <h3>{#A-flickr#}</h3>
+        <p>Required For All Flickr Feeds. <a href="{#doc_url#}#flickr-api" target="_blank">Read the documentation</a> for more details on how to get your Flickr API Key.</p>
+        <div class="input">
+            <p class="title">{#A-flickr_api_key#}</p>
+            <p><input size="50" class="text" type="text" name="flickr_api_key" value="{#flickr_api_key#}" /></p>
+        </div>
+    </div>
+    <br />
+    <div class="input">
+    	<input class="button" type="submit" name="save" value="{#save#}" />
+    </div>
+</form>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    
+    // App selection
+    var token_url = {
+        twitter: '{#twitter_token_url#}',
+		instagram: '{#instagram_token_url#}',
+        linkedin: '{#linkedin_token_url#}',
+        facebook: '{#facebook_token_url#}'
+    };
+
+    function sb_set_app(app, network) {
+        var fieldrow = "#fieldrow-section_"+network+"_";
+        if (app == 'yes') {
+            $(fieldrow+"api_key").fadeOut('fast');
+            $(fieldrow+"api_secret").fadeOut('fast');
+        } else {
+            $(fieldrow+"api_key").fadeIn('fast');
+            $(fieldrow+"api_secret").fadeIn('fast');
+            sb_set_tokenurl(network, token_url[network]);
+        }
+    }
+
+    function sb_set_tokenurl(network, token_url) {
+        var api_key = $('[name="'+network+'_api_key"]').val();
+        var api_secret = $('[name="'+network+'_api_secret"]').val();
+		if (network == 'instagram') {
+			$("#sb-"+network+"-token").attr('href', token_url+'&instagram_client_id='+api_key+'&instagram_client_secret='+api_secret);
+		} else {
+	        $("#sb-"+network+"-token").attr('href', token_url+'&api_key='+api_key+'&api_secret='+api_secret);
+		}
+    }
+
+    function sb_set_api(network) {
+        $('[name="'+network+'_app"]').on("change", function() {
+            sb_set_app( $(this).val(), network );
+            if ( $(this).val() == 'yes' )
+                $("#sb-"+network+"-token").attr('href', token_url[network]);
+        });
+        var the_app = $('[name="'+network+'_app"]:checked').val();
+        sb_set_app(the_app, network);
+
+        $('[name="'+network+'_api_key"],[name="'+network+'_api_secret"]').on("keyup keypress blur change click", function() {
+            sb_set_tokenurl(network, token_url[network]);
+        });
+    }
+
+    sb_set_api('twitter');
+    sb_set_api('linkedin');
+    sb_set_api('facebook');
+	sb_set_api('instagram');
+    // End - App selection
+
+    // Access token set
+    var query = window.location.search;
+    if (query.length && query.indexOf("access_token") > -1) {
+        var apis = ["facebook", "twitter", "instagram", "linkedin"];
+        var api = getUrlVars()["api"];
+        if (apis.indexOf(api) > -1) {
+            var access_token = getUrlVars()["access_token"];
+            var api_key = getUrlVars()["api_key"];
+            var api_secret = getUrlVars()["api_secret"];
+            
+            if (api == 'facebook') {
+                var tokenmsg = 'You successfully connected your Facebook account.';
+            } else if (api == 'twitter') {
+                var access_token_secret = getUrlVars()["access_token_secret"];
+                $('[name="twitter_access_token"]').val(access_token);
+                $('[name="twitter_access_token_secret"]').val(access_token_secret);
+                var tokenmsg = 'Access Token is set.';
+            } else if (api == 'linkedin') {
+                $('[name="linkedin_access_token"]').val(access_token);
+                var tokenmsg = 'Access Token is set.';
+            } else if (api == 'instagram') {
+                var tokenmsg = 'You successfully connected your Instagram account.';
+            }
+
+            if (api_key && api_secret) {
+                $('[name="'+api+'_app"][value=no]').prop("checked", true);
+                sb_set_app('no', api);
+                $('[name="'+api+'_api_key"]').val(api_key);
+                $('[name="'+api+'_api_secret"]').val(api_secret);
+            }
+
+            // scroll page to api section
+            var target = $('#sections-section_' + api);
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 0);
+            }
+
+            // Display success message
+            $("#sb-" + api + "-token-msg").html('<p class="success">'+tokenmsg+'</p>').append('<p class="warning">Do not forget to click <strong>Save Changes</strong> button at the end of this page.</p>');
+        }
+    }
+
+/*
+    // Instagram access token set
+	$('[name="SB_Settings_Page[section_instagram][instagram_client_id]"],[name="SB_Settings_Page[section_instagram][instagram_client_secret]"]').on("keyup keypress blur change click", InstagramSetUrl);
+    $('[name="instagram_client_id"]').on("keyup keypress blur change click", function() {
+        var client_id = $(this).val();
+        var redirect_uri = '{#instagram_token_url#}';
+        $("#sb-instagram-token").attr('href', 'https://instagram.com/oauth/authorize/?client_id='+client_id+'&redirect_uri='+redirect_uri+'&response_type=token&scope=basic');
+    });
+            function InstagramSetUrl(){
+				var client_id = $('[name="SB_Settings_Page[section_instagram][instagram_client_id]"]').val();
+				var client_secret = $('[name="SB_Settings_Page[section_instagram][instagram_client_secret]"]').val();
+
+				var get_token_uri = '<?php echo $this->URL_Connect_Instagram_Account ?>';
+				$("#sb-instagram-token").attr('href', get_token_uri+'&instagram_client_id='+client_id+'&instagram_client_secret='+client_secret);
+			}
+			*/
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+});
+</script>

@@ -1,0 +1,37 @@
+<?php
+
+$_['tags'] = 'Tag';
+$_['posted'] = 'Pubblicato';
+$_['show_all'] = 'Mostra tutto';
+$_['comments'] = 'commenti';
+$_['likes'] = 'Piaciuto';
+$_['load_more'] = 'Mostra più Post';
+$_['a_long_while_ago'] = 'un lungo tempo fa';
+$_['over_2_years_ago'] = 'Oltre 2 anni fa';
+$_['over_a_year_ago'] = 'oltre un anno fa';
+$_['about_a_year_ago'] = 'circa un anno fa';
+$_['d_months_ago'] = '%d mesi fa';
+$_['last_month'] = 'lo scorso mese';
+$_['3_weeks_ago'] = '3 Settimane fa';
+$_['2_weeks_ago'] = '2 Settimane fa';
+$_['last_week'] = 'la settimana scorsa';
+$_['d_days_ago'] = '%d giorni fa';
+$_['yesterday'] = 'ieri';
+$_['d_hours_ago'] = '%d ore fa';
+$_['an_hour_ago'] = "un'ora fa";
+$_['d_minutes_ago'] = '%d minuti fa';
+$_['just_now'] = 'proprio ora';
+$_['read_more'] = 'leggi di più (+)';
+$_['read_less'] = 'leggi meno (-)';
+$_['timeline_photos'] = 'Foto Timeline';
+$_['added_photos'] = 'foto aggiunte';
+$_['shared_story'] = 'storia condivisa';
+$_['created_note'] = 'Crea nota';
+$_['mobile_status_update'] = 'aggiornamento di stato mobile';
+$_['added_video'] = 'Video aggiunto';
+$_['wall_post'] = 'post della bacheca';
+$_['created_event'] = 'Evento creato';
+$_['show_comments'] = 'Mostra commenti';
+$_['retweeted'] = 'retweeted';
+$_['search'] = 'Ricerca...';
+$_['search_stream'] = 'Cerca nel flusso social';

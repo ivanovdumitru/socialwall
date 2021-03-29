@@ -1,0 +1,8 @@
+{
+   "error": {
+      "message": "Page ID 624290390999239 was migrated to page ID 80655071208.  Please update your API calls to the new ID",
+      "type": "OAuthException",
+      "code": 21,
+      "fbtrace_id": "A2emfkaXSSe4zmkKnSBvGCZ"
+   }
+}

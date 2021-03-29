@@ -1,0 +1,17 @@
+<h2>{#G-login#}</h2>
+
+<form action="{#url#}" method="post">
+    <input type="hidden" name="step" value="login" />
+    
+    <div class="input">
+        <p>{#username#}</p>
+        <input type="text" name="username" required autofocus>
+    </div>
+    <div class="input">
+        <p>{#password#}</p>
+        <input type="password" name="password" required>
+    </div>
+    <div class="input">
+    	<input type="submit" name="login" value="{#G-login#}" />
+    </div>
+</form>
