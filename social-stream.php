@@ -3464,7 +3464,7 @@ class SocialStream {
             $more_output .= '
                 lmobj = $("#sb_'.$label.' .sb-loadmore");
                 lmnonce = lmobj.attr("data-nonce");';
-            $more_output .= "$('#sb_".$label." .sb-loadmore').html('<p class=\"sb-loading\">&nbsp;</p>');";var_dump(SB_DIR);
+            $more_output .= "$('#sb_".$label." .sb-loadmore').html('<p class=\"sb-loading\">&nbsp;</p>');";
             $more_output .= '
                 $.ajax({
                 type: "GET",
