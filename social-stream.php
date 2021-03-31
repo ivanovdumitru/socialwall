@@ -17,7 +17,9 @@
 define( 'SB_DIR', dirname( __FILE__ ) );
 
 @include( SB_DIR . '/config.php' );
-
+@include( SB_DIR.'/SocialWallAssets.php');
+$url = \SocialWallAssets::register($this);
+define('url',$url->baseUrl);
 if ( ! defined( 'SB_PATH' ) && ! isset( $GLOBALS['SB_PATH'] ) ) {
     exit('Configuration file was not found or path to PHP Social Stream script directory is not defined! <strong>Run script setup.</strong>');
 }
@@ -92,7 +94,7 @@ class SocialStream {
     // Initialize by function
     function init( $attr, $echo = true, $args = null, $ajax_feed = array(), $loadmore = array() ) {
 
-        $SB_PATH = Yii::getAlias('@vendor').'/social-wall/';
+        $SB_PATH = url;
         $id = ! empty($attr['id']) ? $attr['id'] : substr( sha1( implode('', $attr) ), 0, 5 );
         $type = ! empty($attr['type']) ? $attr['type'] : 'wall';
         $this->sboption = $attr['network'];
@@ -801,24 +803,24 @@ class SocialStream {
                 $cssfiles = $jsfiles = '';
                 if ( ! $GLOBALS['enqueue']['general']) {
                     // add css files
-                    $cssfiles .= '<link href="'. $SB_PATH . 'public/' . $src . 'css/colorbox.css" rel="stylesheet" type="text/css" />';
-                    $cssfiles .= '<link href="'. $SB_PATH . 'public/' . $src . 'css/styles.css" rel="stylesheet" type="text/css" />';
+                    $cssfiles .= '<link href="'. $SB_PATH . '/css/colorbox.css" rel="stylesheet" type="text/css" />';
+                   $cssfiles .= '<link href="'. $SB_PATH . '/css/styles.css" rel="stylesheet" type="text/css" />';
 
                     // load custom css file if exist
-                    if ( ! empty($themeoption['custom_css']) )
-                        if (stristr($themeoption['custom_css'], '.css') == TRUE)
-                            $cssfiles .= '<link href="'. $SB_PATH . 'custom-layouts/' . @$themeoption['custom_css'].'" rel="stylesheet" type="text/css" />';
+//                    if ( ! empty($themeoption['custom_css']) )
+//                        if (stristr($themeoption['custom_css'], '.css') == TRUE)
+//                            $cssfiles .= '<link href="'. $SB_PATH . 'custom-layouts/' . @$themeoption['custom_css'].'" rel="stylesheet" type="text/css" />';
 
                     // add js files
-                    $jsfiles .= '<script type="text/javascript" src="'. $SB_PATH . 'public/js/jquery.min.js"></script>';
-                    $jsfiles .= '<script type="text/javascript" src="'. $SB_PATH . 'public/js/sb-utils.js"></script>';
+                    $jsfiles .= '<script type="text/javascript" src="'. $SB_PATH . '/js/jquery.min.js"></script>';
+                    $jsfiles .= '<script type="text/javascript" src="'. $SB_PATH . '/js/sb-utils.js"></script>';
                     
                     $GLOBALS['enqueue']['general'] = true;
                 }
                 if ( $is_timeline ) {
                     if ( ! $GLOBALS['enqueue']['timeline']) {
-                        $cssfiles .= '<link href="'.$SB_PATH . 'public/' . $src . 'css/timeline-styles.css" rel="stylesheet" type="text/css" />';
-                        $jsfiles .= '<script type="text/javascript" src="'.$SB_PATH . 'public/js/sb-timeline.js"></script>';
+                        $cssfiles .= '<link href="'.$SB_PATH . '/css/timeline-styles.css" rel="stylesheet" type="text/css" />';
+                        $jsfiles .= '<script type="text/javascript" src="'.$SB_PATH . '/js/sb-timeline.js"></script>';
                         $GLOBALS['enqueue']['timeline'] = true;
                     }
                 } else {
@@ -827,33 +829,33 @@ class SocialStream {
                             if ( ! $GLOBALS['enqueue']['carousel']) {
 								$src_carousel = $SB_DEBUG ? 'src/carousel/' : '';
                                 $cssfiles .= '<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" type="text/css" />';
-								$cssfiles .= '<link href="'.$SB_PATH . 'public/' . $src_carousel . 'css/slick.css" rel="stylesheet" type="text/css" />';
-								$cssfiles .= '<link href="'.$SB_PATH . 'public/' . $src_carousel . 'css/slick-theme.css" rel="stylesheet" type="text/css" />';
-								$jsfiles .= '<script type="text/javascript" src="'.$SB_PATH . 'public/js/slick.min.js"></script>';
+								$cssfiles .= '<link href="'.$SB_PATH . '/' . $src_carousel . 'css/slick.css" rel="stylesheet" type="text/css" />';
+								$cssfiles .= '<link href="'.$SB_PATH . '/' . $src_carousel . 'css/slick-theme.css" rel="stylesheet" type="text/css" />';
+								$jsfiles .= '<script type="text/javascript" src="'.$SB_PATH . '/js/slick.min.js"></script>';
                                 $GLOBALS['enqueue']['carousel'] = true;
                             }
                         } else {
                             if ( ! $GLOBALS['enqueue']['rotating']) {
-                                $jsfiles .= '<script type="text/javascript" src="'.$SB_PATH . 'public/js/sb-rotating.js"></script>';
+                                $jsfiles .= '<script type="text/javascript" src="'.$SB_PATH . '/js/sb-rotating.js"></script>';
                                 $GLOBALS['enqueue']['rotating'] = true;
                             }
                         }
                     } else {
                         if ( ! $GLOBALS['enqueue']['wall'] && ! $is_grid ) {
-							$jsfiles .= '<script type="text/javascript" src="'.$SB_PATH . 'public/js/sb-wall.js"></script>';
+							$jsfiles .= '<script type="text/javascript" src="'.$SB_PATH . '/js/sb-wall.js"></script>';
 							$GLOBALS['enqueue']['wall'] = true;
                         }
                     }
                 }
                 
                 if (@$themeoption['layout'] == "hero") {
-					$cssfiles .= '<link href="'.$SB_PATH . 'public/' . $src . 'css/hero.css" rel="stylesheet" type="text/css" />';
+					$cssfiles .= '<link href="'.$SB_PATH . '/' . $src . 'css/hero.css" rel="stylesheet" type="text/css" />';
 				}
 				if (@$themeoption['layout'] == "brick") {
-					$cssfiles .= '<link href="'.$SB_PATH . 'public/' . $src . 'css/brick.css" rel="stylesheet" type="text/css" />';
+					$cssfiles .= '<link href="'.$SB_PATH . '/' . $src . 'css/brick.css" rel="stylesheet" type="text/css" />';
 					
 					if ($attr["columns_style"] == "1-2")
-						$jsfiles .= '<script type="text/javascript" src="' . $SB_PATH . 'public/js/brick.min.js"></script>';
+						$jsfiles .= '<script type="text/javascript" src="' . $SB_PATH . '/js/brick.min.js"></script>';
 				}
 				
                 $output .= $cssfiles . $jsfiles;
@@ -1130,7 +1132,7 @@ class SocialStream {
                                             if ($facebook_image_proxy) {
                                             	$token = md5(@$urlfbArr[0].@$_SERVER['SERVER_ADDR'].@$_SERVER['SERVER_ADMIN'].@$_SERVER['SERVER_NAME'].@$_SERVER['SERVER_PORT'].@$_SERVER['SERVER_PROTOCOL'].@$_SERVER['SERVER_SIGNATURE'].@$_SERVER['SERVER_SOFTWARE'].@$_SERVER['DOCUMENT_ROOT']);
                                             	$imgStr = 'resize='.$image_width.'&refresh=3600&token='.$token.'&src='.@$urlfbArr[0];
-                                            	$source = $SB_PATH.'ajax.php?sbimg='.base64_encode($imgStr);
+                                            	$source = SB_DIR.'ajax.php?sbimg='.base64_encode($imgStr);
                                             } else {
                                                 $source = (@$type2 != 'share') ? urldecode(@$urlfbArr[0]) : $entry->full_picture;
 											}
