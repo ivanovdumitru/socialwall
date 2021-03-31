@@ -1132,7 +1132,7 @@ class SocialStream {
                                             if ($facebook_image_proxy) {
                                             	$token = md5(@$urlfbArr[0].@$_SERVER['SERVER_ADDR'].@$_SERVER['SERVER_ADMIN'].@$_SERVER['SERVER_NAME'].@$_SERVER['SERVER_PORT'].@$_SERVER['SERVER_PROTOCOL'].@$_SERVER['SERVER_SIGNATURE'].@$_SERVER['SERVER_SOFTWARE'].@$_SERVER['DOCUMENT_ROOT']);
                                             	$imgStr = 'resize='.$image_width.'&refresh=3600&token='.$token.'&src='.@$urlfbArr[0];
-                                            	$source = SB_DIR.'ajax.php?sbimg='.base64_encode($imgStr);
+                                            	$source = SB_DIR.'/ajax.php?sbimg='.base64_encode($imgStr);
                                             } else {
                                                 $source = (@$type2 != 'share') ? urldecode(@$urlfbArr[0]) : $entry->full_picture;
 											}
@@ -2384,7 +2384,7 @@ class SocialStream {
                             if (@$thumb && ! empty($image_width) ) {
                             	$token = md5(urlencode($thumb).@$_SERVER['SERVER_ADDR'].@$_SERVER['SERVER_ADMIN'].@$_SERVER['SERVER_NAME'].@$_SERVER['SERVER_PORT'].@$_SERVER['SERVER_PROTOCOL'].@strip_tags($_SERVER['SERVER_SIGNATURE']).@$_SERVER['SERVER_SOFTWARE'].@$_SERVER['DOCUMENT_ROOT']);
                             	$imgStr = 'resize='.$image_width.'&refresh=3600&token='.$token.'&src='.$thumb;
-                            	$thumb = $SB_PATH.'ajax.php?sbimg='.base64_encode($imgStr);
+                            	$thumb = SB_DIR.'/ajax.php?sbimg='.base64_encode($imgStr);
                             }
 
                             $sbi = $this->make_timestr($item->pubDate, $link);
@@ -2482,7 +2482,7 @@ class SocialStream {
                             if (@$thumb && ! empty($image_width) ) {
                             	$token = md5(urlencode($thumb).@$_SERVER['SERVER_ADDR'].@$_SERVER['SERVER_ADMIN'].@$_SERVER['SERVER_NAME'].@$_SERVER['SERVER_PORT'].@$_SERVER['SERVER_PROTOCOL'].@strip_tags($_SERVER['SERVER_SIGNATURE']).@$_SERVER['SERVER_SOFTWARE'].@$_SERVER['DOCUMENT_ROOT']);
                             	$imgStr = 'resize='.$image_width.'&refresh=3600&token='.$token.'&src='.$thumb;
-                            	$thumb = $SB_PATH.'ajax.php?sbimg='.base64_encode($imgStr);
+                            	$thumb = SB_DIR.'/ajax.php?sbimg='.base64_encode($imgStr);
                             }
                             
                             $sbi = $this->make_timestr($item->published, $link);
@@ -3464,11 +3464,11 @@ class SocialStream {
             $more_output .= '
                 lmobj = $("#sb_'.$label.' .sb-loadmore");
                 lmnonce = lmobj.attr("data-nonce");';
-            $more_output .= "$('#sb_".$label." .sb-loadmore').html('<p class=\"sb-loading\">&nbsp;</p>');";
+            $more_output .= "$('#sb_".$label." .sb-loadmore').html('<p class=\"sb-loading\">&nbsp;</p>');";var_dump(SB_DIR);
             $more_output .= '
                 $.ajax({
-                type: "post",
-                url: "'.$SB_PATH.'ajax.php",
+                type: "GET",
+                url: "social-wall",
                 data: {
                     action: "sb_loadmore",
                     attr: '.$attr_ajax.',
@@ -3525,8 +3525,8 @@ class SocialStream {
         $more_output .= "fcobj.html('<p class=\"sb-loading\">&nbsp;</p>');";
         $more_output .= '
             $.ajax({
-            type: "post",
-            url: "'.$SB_PATH.'ajax.php",
+            type: "GET",
+            url: "social-wall",
             data: {
                 action: "sb_fetchcomments",
                 network: fcobj.attr("data-network"),
@@ -4053,8 +4053,8 @@ class SocialStream {
                   $('#timeline_".$label." .sb-content ul').html('<p class=\"sb-loading\"><i class=\"sb-icon sb-'+feed+'\"></i></p>');";
                $output .= '
                   $.ajax({
-                    type: "post",
-                    url: "'.$SB_PATH.'ajax.php",
+                    type: "GET",
+                    url: "social-wall",
                     data: { action: "sb_tabable", feed: feed, attr: '.$attr_ajax.', nonce: tabnonce, label: "'.$label.'" },
                     cache: false
                   })
@@ -4205,8 +4205,8 @@ class SocialStream {
               setInterval(function(){
                   var stlen = $("#timeline_'.$label.' '.$stdiv.'").length;
                   $.ajax({
-                    type: "post",
-                    url: "'.$SB_PATH.'ajax.php",
+                    type: "GET",
+                    url: "social-wall",
                     data: {action: "sb_liveupdate", attr: '.$attr_ajax.', nonce: "'.ss_nonce_create( 'liveupdate' ).'", results: stlen, label: "'.$label.'"},
                     cache: false
                   })
@@ -5697,4 +5697,5 @@ function social_stream( $atts ) {
     return $sb->init( $atts, false );
 }
 
+include(SB_DIR.'/ajax.php');
 // End of file social-stream.php

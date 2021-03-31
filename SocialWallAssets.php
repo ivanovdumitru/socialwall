@@ -2,8 +2,8 @@
 
 class SocialWallAssets extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/EstateApps/SocialWall/public/';
-    public $baseUrl = '@vendor/EstateApps/SocialWall/public/';
+    public $sourcePath = '@vendor/Social/Social-Wall/public/';
+    public $baseUrl = '@vendor/Social/Social-Wall/public/';
 
     public $css = [
         'css/brick.css',
@@ -30,18 +30,6 @@ class SocialWallAssets extends \yii\web\AssetBundle
         'yii\web\YiiAsset',
     ];
 
-//    public function init()
-//    {
-//        $theme = Yii::$app->getModule('estateapps')->theme;
-//        $website = Yii::$app->getModule('estateapps')->website;
-//
-//        $this->sourcePath = '@app/websites/'.$website.'/';
-//        $this->baseUrl = '@app/websites/'.$website.'/';
-//        if (isset(Yii::$app->components['sass']))
-//        {
-//            $this->css = Yii::$app->sass->publishAndGetPathArray($this->scss,Yii::getAlias($this->baseUrl));
-//        }
-//    }
 
     public function getUrl($url)
     {

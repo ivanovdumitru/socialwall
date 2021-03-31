@@ -8,10 +8,8 @@
 @header( 'Content-Type: text/html; charset=utf-8' );
 @header( 'X-Robots-Tag: noindex' );
 
-require_once( dirname( __FILE__ ) . '/social-stream.php' );
-
 // create the ajax callback for tabable widget
-if (@$_POST['action'] == 'sb_tabable') {
+if (@$_GET['action'] == 'sb_tabable') {
     
     if ( ! ss_nonce_verify( $_REQUEST['nonce'], "tabable", $_REQUEST['label'] )) {
         exit("No naughty business please!");
@@ -26,7 +24,7 @@ if (@$_POST['action'] == 'sb_tabable') {
     }
 }
 // create the ajax callback for load more
-elseif (@$_POST['action'] == 'sb_loadmore') {
+elseif (@$_GET['action'] == 'sb_loadmore') {
 
     if ( ! ss_nonce_verify( $_REQUEST['nonce'], "loadmore", $_REQUEST['label'] ) ) {
         exit("No naughty business please!");
@@ -41,7 +39,7 @@ elseif (@$_POST['action'] == 'sb_loadmore') {
     }
 }
 // creates the ajax callback for live update
-elseif (@$_POST['action'] == 'sb_liveupdate') {
+elseif (@$_GET['action'] == 'sb_liveupdate') {
 
     if ( ! ss_nonce_verify( $_REQUEST['nonce'], "liveupdate")) {
         exit("No naughty business please!");
@@ -57,7 +55,7 @@ elseif (@$_POST['action'] == 'sb_liveupdate') {
     }
 }
 // create the ajax callback for comments
-elseif (@$_POST['action'] == 'sb_fetchcomments') {
+elseif (@$_GET['action'] == 'sb_fetchcomments') {
 
     if ( ! ss_nonce_verify( $_REQUEST['nonce'], "fetchcomments")) {
         exit("No naughty business please!");
@@ -162,6 +160,6 @@ elseif ($sbimg = @$_GET['sbimg']) {
     }
 }
 
-die();
+
 
 // End of file ajax.php
