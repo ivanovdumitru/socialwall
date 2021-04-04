@@ -322,7 +322,7 @@ class ss_flat_layout extends ss_default_layout{
 
                 $dotfilter = ( $type == 'wall' ) ? str_replace(array('timeline', '.sboard'), array('sb', ''), $dotboard) : $dotboard;
                 if (!@$attr['carousel'])
-                    $style[$dotfilter.' .sb-'.$network.'.sb-hover:hover, '.$dotfilter.' .sb-'.$network.'.active'][] = 'background-color: '.$colorVal.' !important;border-color: '.$colorVal.' !important;color: #fff !important';
+                    $style[$dotfilter.' .sb-'.$network.'.sb-hover:hover, '.$dotfilter.' .sb-'.$network.'.active'][] = 'background-color: '.$colorVal.'border-color: '.$colorVal.';color: #fff !important';
                 
                 // set colors for tabs
                 if (@$attr['tabable']) {
