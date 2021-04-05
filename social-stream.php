@@ -515,8 +515,7 @@ class SocialStream {
         
         if ( $is_feed && @$themeoption[$typeoption]['title_background_color'] )
         if ( $themeoption[$typeoption]['title_background_color'] != 'transparent') {
-            $style["$dotboard .sb-heading, $dotboard .sb-opener"][] = 'background-color: '.$themeoption[$typeoption]['title_background_color'];
-        }
+            $style["$dotboard .sb-heading, $dotboard .sb-opener"][] = 'background-color: '.$themeoption[$typeoption]['title_background_color'].' !important';        }
         if ( $is_feed && @$themeoption[$typeoption]['title_color'] )
         if ( $themeoption[$typeoption]['title_color'] != 'transparent')
             $style["$dotboard .sb-heading"][] = 'color: '.$themeoption[$typeoption]['title_color'];
