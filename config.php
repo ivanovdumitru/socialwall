@@ -435,7 +435,7 @@ $GLOBALS['themes'] = array(
     // Flat Light
     'sb-flat-light' => array(
         'layout' => 'flat',
-        'font_size' => '11',
+        'font_size' => '15',
         'social_colors' => $social_colors,
         'type_icons' => '',
         'custom_css' => '',

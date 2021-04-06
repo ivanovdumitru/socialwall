@@ -11,7 +11,8 @@ class ss_flat_layout extends ss_default_layout{
     function create_item( $feed_class, $param, $attr = array(), $output = array(), $sbi = 0, $i = 0, $ifeed = 0 ) {
         $filtername = ' '.$feed_class.'-'.$i.'-'.$ifeed;
         $playstate = (@$param['play']) ? '<div class="sb-playstate"></div>' : '';
-        $user_title = (@$param['user']['title']) ? $param['user']['title'] : $param['user']['name'];
+//        $user_title = (@$param['user']['title']) ? $param['user']['title'] : $param['user']['name'];
+        $user_title = '';
         $imglayout = (@$attr['layout_image']) ? ' sb-'.$attr['layout_image'] : '';
         $datasize = (@$param['size']) ? ' data-size="' . $param['size'] . '"' : '';
         $imgAlt = $this->sb_create_alt($feed_class, $param);
@@ -55,11 +56,11 @@ class ss_flat_layout extends ss_default_layout{
 					</div>';
                 }
                 $sbimg = (@$attr['lazyload']) ? 'data-lazy="' . htmlspecialchars($param['thumb']) . '"' : 'src="' . htmlspecialchars($param['thumb']) . '"';
-                $thumb .= '<a class="'.$cropclass.'" href="' . $aurl . '"'.$datasize.$this->target.'><img class="sb-img" '.$sbimg.' alt="'.$imgAlt.'">'.$playstate.'</a>';
+//                $thumb .= '<a class="'.$cropclass.'" href="' . $aurl . '"'.$datasize.$this->target.'><img class="sb-img" '.$sbimg.' alt="'.$imgAlt.'">'.$playstate.'</a>';
             } else {
                 $cropclass .= ' sb-userimg';
                 if (@$param['user']['image']) {
-                    $thumb = '<div class="'.$cropclass.'"><img class="sb-img" src="' . $param['user']['image'] . '" alt="' . @$param['user']['name'] . '"><br /><span>'.$user_title.'</span></div>';
+//                    $thumb = '<div class="'.$cropclass.'"><img class="sb-img" src="' . $param['user']['image'] . '" alt="' . @$param['user']['name'] . '"><br /><span>'.$user_title.'</span></div>';
                 }
             }
             if (@$thumb)
@@ -121,22 +122,22 @@ class ss_flat_layout extends ss_default_layout{
             $user_inner = '';
             if (@$param['user']['image']) {
                 $user_image = ( @$param['user']['url'] ) ? '<a href="' . @$param['user']['url'] . '"'.$this->target.'><img class="sb-img" alt="' . @$param['user']['name'] . '" src="' . $param['user']['image'] . '"></a>' : '<img class="sb-img" alt="' . @$param['user']['name'] . '" src="' . $param['user']['image'] . '">';
-                $user_inner .= '
-                <div class="sb-uthumb">'.$user_image.'</div>';
+                $user_inner .= '';
+//                <div class="sb-uthumb">'.$user_image.'</div>';
             } else {
                 $no_thumb_class = ' sb-nouthumb';
             }
 
             if ($user_title || @$user_text) {
                 $user_title_linked = ( @$param['user']['url'] ) ? '<a href="' . @$param['user']['url'] . '"'.$this->target.'>'.$user_title.'</a>' : $user_title;
-                $user_inner .= '
-                    <div class="sb-uinfo'.@$no_thumb_class.'">';
-                if ($user_title)
-                    $user_inner .= '<div class="sb-utitle"'.@$user_title_style.'>' . $user_title_linked . '</div>';
-                if (@$user_text && $user_title)
-                    $user_inner .= '<div class="sb-uname">' . $user_text . '</div>';
-                $user_inner .= '
-                    </div>';
+                $user_inner .= '';
+//                    <div class="sb-uinfo'.@$no_thumb_class.'">';
+//                if ($user_title)
+//                    $user_inner .= '<div class="sb-utitle"'.@$user_title_style.'>' . $user_title_linked . '</div>';
+//                if (@$user_text && $user_title)
+//                    $user_inner .= '<div class="sb-uname">' . $user_text . '</div>';
+//                $user_inner .= '
+//                    </div>';
             }
 
             if (@$output['user'] && ($user_title || @$user_image) ) {
@@ -291,7 +292,7 @@ class ss_flat_layout extends ss_default_layout{
           </div>
         </div>' . "\n";
         } else {
-            $icon = ( @$param['icon'][0] ) ? '<img class="sb-img" src="'.$param['icon'][0].'" style="vertical-align:middle" alt="' . $feed_class . '">' : '<i class="sb-icon sb-' . $feed_class . ' sb-2x pull-left"></i>';
+            $icon = ( @$param['icon'][0] ) ? '<img class="sb-img" src="'.$param['icon'][0].'" style="vertical-align:middle" alt="' . $feed_class . '">' : '<i class="icon fa fa-' . $feed_class . ' sb-2x pull-left"></i>';
             $tag = ( $attr['type'] != 'feed' || @$attr['carousel'] ) ? 'div' : 'li';
             $out1 = '
             <'.$tag.' class="sb-item sb-' . $feed_class . $filtername . $sbinline.'"'.$idstr.$inline.'>
@@ -300,7 +301,7 @@ class ss_flat_layout extends ss_default_layout{
                 $out1 .= '
                 <div class="sb-footer bg-' . $feed_class . '">
                     ' . $icon . '
-                    <a href="' . @$param['url'] . '"'.$this->target.'>'.ss_lang( 'posted' ).': ' . ss_friendly_date($param['date']) . '</a>
+                    <a href="' . @$param['url'] . '"'.$this->target.'>' . ss_friendly_date($param['date']) . '</a>
                 </div>';
             $out1 .= '
             </div>

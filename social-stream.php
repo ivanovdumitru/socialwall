@@ -745,7 +745,7 @@ class SocialStream {
                                     $filteractive = (@$attr['default_filter'] == $key) ? ' active' : '';
                                     $feeds[$key][$i][$key2] = $feed_data;
                                     if (@$value[$key])
-                                    	$filterItems[$key] = ($is_feed) ? '<span class="sb-hover sb-'.$key.$filterlabel.$filteractive.'" data-filter=".sb-'.$key.'"><i class="sb-micon sb-'.$key.'"></i></span>' : '<span class="sb-hover sb-'.$key.$filterlabel.$filteractive.'" data-filter=".sb-'.$key.'"><i class="sb-icon sb-'.$key.'"></i></span>';
+                                    	$filterItems[$key] = ($is_feed) ? '<span class="sb-hover sb-'.$key.$filterlabel.$filteractive.'" data-filter=".sb-'.$key.'"><i class="sb-micon sb-'.$key.'"></i></span>' : '<span class="sb-hover sb-'.$key.$filterlabel.$filteractive.'" data-filter=".sb-'.$key.'"><i class="icon fa fa-'.$key.'"></i></span>';
                                 }
                             } else {
                                 $activeTab = '';
@@ -763,10 +763,10 @@ class SocialStream {
                     			<li class="'.$key.@$activeTab.'" data-feed="'.$key.'">';
                                 if (@$attr['position'] == 'normal') {
                                     $fi .= '
-                                    <span><i class="sb-icon sb-'.$key.'"></i></span>';
+                                    <span><i class="icon fa fa-'.$key.'"></i></span>';
                                 } else {
                                 	$fi .= '
-                                    <i class="sb-icon sb-'.$key.'"></i>';
+                                    <i class="icon fa fa-'.$key.'"></i>';
                                     if ( $location != 'bottom' )
                                         $fi .= ' <span>'.ucfirst($key).'</span>';
                                 }
@@ -802,7 +802,7 @@ class SocialStream {
                 $cssfiles = $jsfiles = '';
                 if ( ! $GLOBALS['enqueue']['general']) {
                     // add css files
-                    $cssfiles .= '<link href="'. $SB_PATH . '/css/colorbox.css" rel="stylesheet" type="text/css" />';
+                   $cssfiles .= '<link href="'. $SB_PATH . '/css/colorbox.css" rel="stylesheet" type="text/css" />';
                    $cssfiles .= '<link href="'. $SB_PATH . '/css/styles.css" rel="stylesheet" type="text/css" />';
 
                     // load custom css file if exist
@@ -888,8 +888,8 @@ class SocialStream {
 				}
                 if ( @$attr['filters'] && @$filterItems ) {
                     if (@$attr['display_all'] != 'disabled') {
-                    	$display_all = '<span class="sb-hover filter-label'.(@$attr['default_filter'] ? '' : ' active').'" data-filter="*" title="'.ss_lang('Show All').'"><i class="sb-icon sb-ellipsis-h"></i></span>';
-	                    if (@$attr['display_all'] == '1')
+                    	$display_all = '<span class="sb-hover filter-label'.(@$attr['default_filter'] ? '' : ' active').'" data-filter="*" title="'.ss_lang('Show All').'"><i class="icon fa fa-ellipsis-h"></i></span>';
+                        if (@$attr['display_all'] == '1')
 	                    	$display_all_last = @$display_all;
 	                    else
                     		$display_all_first = @$display_all;
