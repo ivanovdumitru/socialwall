@@ -2366,7 +2366,8 @@ class SocialStream {
                                 if (@$attr['words']) {
                                     if ( ! $thumb) {
                                         $thumbarr = $this->getsrc($description);
-                                        $thumb = $thumbarr['src'];
+										if(isset($thumbarr['rss']))
+                                          $thumb = $thumbarr['src'];
                                     }
                                     $text = $this->word_limiter($description, $link);
                                 } else {
